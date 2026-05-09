@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(code . *)",
-      "Bash(Remove-Item *)"
+      "Bash(Remove-Item *)",
+      "Bash(Get-Content \"C:\\\\Users\\\\lsifo\\\\opti-forma-site\\\\css\\\\style.css\")",
+      "Bash(Measure-Object -Line)"
     ]
   }
 }

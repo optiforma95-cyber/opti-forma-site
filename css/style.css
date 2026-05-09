@@ -516,6 +516,84 @@ nav {
 }
 
 /* ══════════════════════════════════════════
+   SECTION — ILS NOUS FONT CONFIANCE
+   ══════════════════════════════════════════ */
+.trust-section {
+  background: var(--bg-light);
+  padding: 5rem 1.5rem;
+}
+.trust-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.trust-inner .section-sub {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.trust-badge {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem 1.2rem;
+  width: 160px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.trust-badge:hover {
+  box-shadow: 0 6px 20px rgba(48, 153, 141, 0.1);
+  transform: translateY(-3px);
+}
+.tbadge-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+}
+.tbadge-icon--teal {
+  background: var(--teal-light);
+  color: var(--teal);
+}
+.tbadge-icon--blue {
+  background: #e8f0fe;
+  color: #1a73e8;
+}
+.tbadge-icon--rf {
+  background: transparent;
+  overflow: hidden;
+}
+.tbadge-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--dark);
+  line-height: 1.25;
+}
+.tbadge-sub {
+  font-size: 0.71rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+.trust-cta {
+  margin-top: 0.5rem;
+}
+
+/* ══════════════════════════════════════════
    SECTION — FORMATIONS GRID
    ══════════════════════════════════════════ */
 .formations-section {
@@ -1842,6 +1920,7 @@ footer {
   }
 
   .why-section,
+  .trust-section,
   .formations-section,
   .financement-band,
   .cta-section,
@@ -1910,6 +1989,7 @@ footer {
 
   /* Sections */
   .why-section,
+  .trust-section,
   .formations-section,
   .financement-band,
   .cta-section,
@@ -1919,6 +1999,9 @@ footer {
   .qualiopi-guarantees,
   .qualiopi-criteria,
   .contact-section { padding: 4rem 1.5rem; }
+
+  .trust-badges { gap: 0.75rem; }
+  .trust-badge { width: calc(50% - 0.75rem); min-width: 130px; }
 
   /* Certificat */
   .qualiopi-cert-section { padding: 4rem 1.5rem; }
