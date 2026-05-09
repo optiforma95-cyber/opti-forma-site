@@ -190,28 +190,6 @@ nav {
 .nav-cta:hover { background: var(--teal-dark) !important; }
 .nav-cta.active { color: var(--white) !important; }
 
-/* Social icons — nav */
-.nav-social-group {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0 0.6rem;
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
-}
-.nav-social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  color: var(--teal);
-  border-radius: 6px;
-  text-decoration: none;
-  transition: color 0.2s, background 0.2s;
-}
-.nav-social-link:hover { color: var(--teal-dark); background: var(--teal-light); }
-.nav-social-link svg { width: 15px; height: 15px; display: block; }
 
 /* Hamburger */
 .nav-hamburger {
@@ -856,32 +834,21 @@ footer {
 .footer-legal a:hover { color: var(--teal); }
 
 /* Social icons — footer */
-.footer-logo-group {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
 .footer-social {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 1rem;
 }
 .footer-social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  color: var(--teal);
-  border-radius: 8px;
-  background: rgba(48,153,141,0.12);
-  border: 1px solid rgba(48,153,141,0.25);
+  color: #30998D;
   text-decoration: none;
-  transition: color 0.2s, background 0.2s, border-color 0.2s;
+  transition: color 0.2s;
 }
-.footer-social-link:hover { color: var(--white); background: var(--teal); border-color: var(--teal); }
-.footer-social-link svg { width: 14px; height: 14px; display: block; }
+.footer-social-link:hover { color: #216e65; }
+.footer-social-link svg { width: 24px; height: 24px; display: block; }
 
 /* ══════════════════════════════════════════
    PAGE FINANCEMENT — full page
@@ -1974,7 +1941,7 @@ footer {
 
   footer { padding: 2rem 1.5rem; }
   .footer-top { flex-direction: column; align-items: center; text-align: center; }
-  .footer-logo-group { flex-direction: column; align-items: center; gap: 0.75rem; }
+  .footer-social { justify-content: center; }
   .footer-links { justify-content: center; }
   .footer-bottom { flex-direction: column; align-items: center; text-align: center; }
   .footer-nda { text-align: center; }
