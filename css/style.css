@@ -601,7 +601,7 @@ nav {
   overflow: hidden;
 }
 .how-inner {
-  max-width: 1100px;
+  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
 }
@@ -612,8 +612,10 @@ nav {
 }
 .how-steps {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   gap: 0;
+  width: 100%;
   margin-bottom: 0.5rem;
 }
 .how-step {
@@ -621,13 +623,15 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 0.75rem;
+  padding: 0 1.5rem;
 }
 .how-connector {
-  flex: 0 0 2rem;
+  flex: 0 0 40px;
   height: 2px;
-  border-top: 2px dashed var(--teal-mid);
-  margin-top: 1.6rem;
+  border-top: 2px dashed #30998D;
+  margin-top: 2rem;
   align-self: flex-start;
 }
 .how-step-num {
@@ -2098,7 +2102,7 @@ footer {
 
   .trust-badges { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
 
-  .how-step { flex: 0 0 100%; }
+  .how-step { flex: 0 0 100%; padding: 0; }
 
   /* Certificat */
   .qualiopi-cert-section { padding: 4rem 1.5rem; }
