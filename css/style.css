@@ -847,7 +847,7 @@ nav {
   padding: 5rem 5rem;
 }
 .faq-inner {
-  max-width: 800px;
+  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
 }
@@ -857,7 +857,8 @@ nav {
   text-align: center;
 }
 .faq-list {
-  margin-top: 0.5rem;
+  max-width: 800px;
+  margin: 0.5rem auto 0;
   text-align: left;
 }
 .faq-item {
@@ -889,20 +890,22 @@ nav {
   color: var(--teal);
   transition: transform 0.25s ease;
 }
-.faq-item.open .faq-chevron {
+.faq-item.active .faq-chevron {
   transform: rotate(180deg);
 }
 .faq-answer {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.28s ease;
   overflow: hidden;
+  transition: grid-template-rows 0.28s ease;
 }
-.faq-item.open .faq-answer {
+.faq-item.active .faq-answer {
   grid-template-rows: 1fr;
 }
-.faq-answer > p {
+.faq-answer > div {
   min-height: 0;
+}
+.faq-answer > div > p {
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.75;

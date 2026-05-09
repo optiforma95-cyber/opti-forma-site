@@ -76,18 +76,18 @@
   }
 
   /* ── FAQ accordéon ── */
-  document.querySelectorAll('.faq-question').forEach(btn => {
+  document.querySelectorAll('.faq-item button').forEach(btn => {
     btn.addEventListener('click', () => {
-      const item   = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
+      const item     = btn.closest('.faq-item');
+      const isActive = item.classList.contains('active');
 
-      document.querySelectorAll('.faq-item.open').forEach(openItem => {
-        openItem.classList.remove('open');
-        openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+        activeItem.classList.remove('active');
+        activeItem.querySelector('button').setAttribute('aria-expanded', 'false');
       });
 
-      if (!isOpen) {
-        item.classList.add('open');
+      if (!isActive) {
+        item.classList.add('active');
         btn.setAttribute('aria-expanded', 'true');
       }
     });
