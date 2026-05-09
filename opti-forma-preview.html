@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPTI FORMA — Devenez Formateur Compétent</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal:        #30998D;
+    --teal-dark:   #216e65;
+    --teal-light:  #e8f5f3;
+    --teal-mid:    #c2e8e3;
+    --dark:        #1a2e2c;
+    --text:        #2d3f3d;
+    --muted:       #6b8a87;
+    --white:       #ffffff;
+    --bg-light:    #f7fafa;
+    --border:      #e0eeec;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--text); overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.1rem 5rem;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: 0.06em; color: var(--dark); }
+  .logo span { color: var(--teal); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-cta { background: var(--teal) !important; color: var(--white) !important; padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 600 !important; transition: background 0.2s !important; }
+  .nav-cta:hover { background: var(--teal-dark) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    padding: 9rem 5rem 5rem;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 55%;
+    height: 100%;
+    background: var(--teal-light);
+    clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+
+  .hero-content { position: relative; z-index: 1; }
+  .hero-visual  { position: relative; z-index: 1; }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--teal-light); border: 1px solid var(--teal-mid);
+    color: var(--teal-dark); font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.8rem;
+    animation: fadeUp 0.7s ease both;
+  }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--teal); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.5);} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);} }
+
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 800; line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--dark);
+    margin-bottom: 1.4rem;
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+  .hero h1 em { font-style: normal; color: var(--teal); }
+
+  .hero p {
+    font-size: 1.05rem; line-height: 1.75; color: var(--muted);
+    max-width: 500px; margin-bottom: 2.2rem;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+
+  .hero-actions { display: flex; gap: 1rem; animation: fadeUp 0.7s 0.3s ease both; }
+
+  .btn-primary { background: var(--teal); color: var(--white); font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; }
+  .btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); }
+  .btn-outline { color: var(--teal); font-size: 0.9rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.9rem 1.5rem; border: 2px solid var(--teal-mid); border-radius: 6px; transition: border-color 0.2s, background 0.2s; }
+  .btn-outline:hover { border-color: var(--teal); background: var(--teal-light); }
+
+  /* Hero stats */
+  .hero-stats {
+    display: flex; gap: 2.5rem;
+    margin-top: 3.5rem; padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    animation: fadeUp 0.7s 0.4s ease both;
+  }
+  .stat-number { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--teal); line-height: 1; }
+  .stat-label  { font-size: 0.78rem; color: var(--muted); margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* Hero card */
+  .hero-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(48,153,141,0.15), 0 4px 16px rgba(0,0,0,0.06);
+    animation: fadeUp 0.7s 0.25s ease both;
+  }
+  .card-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); background: var(--teal-light); padding: 0.3rem 0.8rem; border-radius: 100px; display: inline-block; margin-bottom: 1rem; }
+  .hero-card h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; }
+  .hero-card p  { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+  .card-meta { display: flex; gap: 0; margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--border); }
+  .meta-item { flex: 1; font-size: 0.78rem; color: var(--muted); padding: 0 1rem; border-right: 1px solid var(--border); }
+  .meta-item:first-child { padding-left: 0; }
+  .meta-item:last-child  { border-right: none; }
+  .meta-item strong { display: block; font-size: 0.92rem; color: var(--dark); font-weight: 700; margin-bottom: 0.15rem; }
+
+  .qualiopi-row {
+    display: flex; align-items: center; gap: 0.8rem;
+    background: var(--teal-light); border-radius: 10px;
+    padding: 0.9rem 1rem; margin-top: 1.2rem;
+  }
+  .q-icon { width: 32px; height: 32px; background: var(--teal); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; color: white; flex-shrink: 0; }
+  .q-text { font-size: 0.8rem; color: var(--teal-dark); line-height: 1.4; }
+  .q-text strong { display: block; font-weight: 700; font-size: 0.83rem; }
+
+  /* ── SECTIONS ── */
+  .section-wrap { padding: 6rem 5rem; max-width: 1280px; margin: 0 auto; }
+  .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.7rem; }
+  .section-title { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 800; line-height: 1.15; color: var(--dark); margin-bottom: 1rem; letter-spacing: -0.02em; }
+  .section-sub   { font-size: 1rem; color: var(--muted); line-height: 1.7; max-width: 560px; margin-bottom: 3rem; }
+
+  /* ── WHY ── */
+  .why-section { background: var(--bg-light); padding: 6rem 5rem; }
+  .why-inner   { max-width: 1280px; margin: 0 auto; }
+  .why-grid    { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
+
+  .why-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 2rem;
+    transition: box-shadow 0.25s, transform 0.25s;
+    position: relative; overflow: hidden;
+  }
+  .why-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--teal); transform: scaleX(0); transition: transform 0.3s; transform-origin: left; }
+  .why-card:hover { box-shadow: 0 12px 40px rgba(48,153,141,0.12); transform: translateY(-4px); }
+  .why-card:hover::before { transform: scaleX(1); }
+
+  .why-icon { width: 46px; height: 46px; background: var(--teal-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1.2rem; }
+  .why-card h3 { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--dark); margin-bottom: 0.6rem; }
+  .why-card p  { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+
+  /* ── FORMATIONS ── */
+  .formations-section { background: var(--white); padding: 6rem 5rem; max-width: none; }
+  .formations-inner   { max-width: 1280px; margin: 0 auto; }
+  .formations-grid    { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
+
+  .formation-card {
+    border: 1px solid var(--border); border-radius: 14px; padding: 2rem;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    display: flex; flex-direction: column;
+  }
+  .formation-card:hover { border-color: var(--teal); box-shadow: 0 8px 30px rgba(48,153,141,0.1); transform: translateY(-3px); }
+  .formation-num { font-size: 0.7rem; font-weight: 700; color: var(--teal); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.8rem; }
+  .formation-card h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: var(--dark); line-height: 1.4; margin-bottom: 0.7rem; }
+  .formation-card p  { font-size: 0.84rem; color: var(--muted); line-height: 1.6; flex: 1; margin-bottom: 1.2rem; }
+  .formation-tags    { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .tag { font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.7rem; border-radius: 100px; background: var(--bg-light); color: var(--muted); border: 1px solid var(--border); }
+  .tag.teal { background: var(--teal-light); color: var(--teal-dark); border-color: var(--teal-mid); }
+
+  /* ── FINANCEMENT ── */
+  .financement-section { background: var(--teal); padding: 6rem 5rem; }
+  .financement-inner   { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .financement-section .section-label { color: var(--teal-mid); }
+  .financement-section .section-title { color: var(--white); }
+  .financement-section .section-sub   { color: rgba(255,255,255,0.75); }
+
+  .financement-items { display: flex; flex-direction: column; gap: 1rem; }
+  .financement-item  { display: flex; gap: 1rem; padding: 1.2rem 1.4rem; background: rgba(255,255,255,0.1); border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); align-items: flex-start; }
+  .f-dot { width: 10px; height: 10px; background: white; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+  .financement-item h4 { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 0.25rem; }
+  .financement-item p  { font-size: 0.83rem; color: rgba(255,255,255,0.7); line-height: 1.55; }
+  .btn-white { background: var(--white); color: var(--teal); font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; }
+  .btn-white:hover { background: var(--teal-light); transform: translateY(-2px); }
+
+  /* ── CTA ── */
+  .cta-section { background: var(--bg-light); padding: 6rem 5rem; }
+  .cta-inner   { max-width: 1280px; margin: 0 auto; background: var(--dark); border-radius: 20px; padding: 4rem; display: flex; align-items: center; justify-content: space-between; gap: 3rem; position: relative; overflow: hidden; }
+  .cta-inner::before { content: 'OF'; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 14rem; color: rgba(255,255,255,0.03); position: absolute; right: 2rem; top: 50%; transform: translateY(-50%); line-height: 1; pointer-events: none; }
+  .cta-inner h2 { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--white); margin-bottom: 0.6rem; line-height: 1.2; }
+  .cta-inner p  { font-size: 1rem; color: rgba(255,255,255,0.6); }
+  .btn-teal { background: var(--teal); color: var(--white); font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; padding: 1rem 2.2rem; border-radius: 8px; text-decoration: none; flex-shrink: 0; transition: background 0.2s, transform 0.15s; display: inline-block; }
+  .btn-teal:hover { background: var(--teal-dark); transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer { background: var(--dark); padding: 3rem 5rem; display: flex; align-items: center; justify-content: space-between; }
+  .footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; letter-spacing: 0.07em; color: var(--white); }
+  .footer-logo span { color: var(--teal); }
+  .footer-links { display: flex; gap: 2rem; list-style: none; }
+  .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--teal); }
+  .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">OPTI<span>FORMA</span></div>
+  <ul class="nav-links">
+    <li><a href="#">Nos formations</a></li>
+    <li><a href="#">Pourquoi nous</a></li>
+    <li><a href="#">Financement</a></li>
+    <li><a href="#">Qualiopi</a></li>
+    <li><a href="#" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Certification Qualiopi</div>
+    <h1>Devenez formateur<br><em>compétent</em> &amp; reconnu</h1>
+    <p>Transformez votre expertise terrain en formation qualifiante. Concevez, animez et évaluez des sessions qui génèrent des résultats concrets.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn-primary">Voir nos formations →</a>
+      <a href="#" class="btn-outline">Financement &amp; modalités</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Finançable OPCO</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">Qualiopi</div>
+        <div class="stat-label">Certification officielle</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">Terrain</div>
+        <div class="stat-label">Approche pratique</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="card-tag">Formation phare</div>
+      <h3>Concevoir &amp; Animer une Formation Professionnelle</h3>
+      <p>De la conception pédagogique à l'animation — une formation complète pour formateurs en herbe et expérimentés.</p>
+      <div class="card-meta">
+        <div class="meta-item"><strong>3 jours</strong>Durée</div>
+        <div class="meta-item"><strong>Présentiel</strong>Format</div>
+        <div class="meta-item"><strong>Éligible CPF</strong>Financement</div>
+      </div>
+      <div class="qualiopi-row">
+        <div class="q-icon">Q</div>
+        <div class="q-text">
+          <strong>Certifié Qualiopi</strong>
+          Accès aux financements publics &amp; mutualisés
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY -->
+<div class="why-section">
+  <div class="why-inner">
+    <div class="section-label">Pourquoi OPTI FORMA</div>
+    <div class="section-title">Ce qui nous distingue</div>
+    <div class="section-sub">Une pédagogie claire, orientée terrain, avec un accompagnement personnalisé du début à la fin.</div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h3>Pédagogie terrain avant tout</h3>
+        <p>Mise en pratique immédiate, études de cas réels et apprentissage par l'action — pas uniquement la théorie.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏅</div>
+        <h3>Certification Qualiopi</h3>
+        <p>Gage de qualité reconnu par l'État. Accédez aux financements OPCO, CPF et fonds publics grâce à nos formations certifiées.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🧭</div>
+        <h3>Accompagnement personnalisé</h3>
+        <p>Conseils, montage de dossier, suivi pendant et après — nous restons à vos côtés à chaque étape.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💡</div>
+        <h3>Méthodes simples &amp; efficaces</h3>
+        <p>Des outils directement utilisables dès le lendemain, sans jargon inutile. Applicables immédiatement sur le terrain.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FORMATIONS -->
+<div class="formations-section">
+  <div class="formations-inner">
+    <div class="section-label">Catalogue</div>
+    <div class="section-title">Nos formations</div>
+    <div class="section-sub">Des parcours pour les professionnels qui veulent transmettre, évoluer ou obtenir une certification reconnue.</div>
+    <div class="formations-grid">
+      <div class="formation-card">
+        <div class="formation-num">Formation 01</div>
+        <h3>Concevoir &amp; Animer une Formation Professionnelle</h3>
+        <p>Maîtrisez toutes les étapes : ingénierie pédagogique, animation, gestion de groupe et évaluation des acquis.</p>
+        <div class="formation-tags">
+          <span class="tag teal">Certifiante</span>
+          <span class="tag">3 jours</span>
+          <span class="tag">OPCO</span>
+        </div>
+      </div>
+      <div class="formation-card">
+        <div class="formation-num">Formation 02</div>
+        <h3>Évaluer &amp; Améliorer ses Actions de Formation</h3>
+        <p>Construire des grilles d'évaluation pertinentes, analyser les résultats et améliorer continuellement la qualité.</p>
+        <div class="formation-tags">
+          <span class="tag teal">Pratique</span>
+          <span class="tag">2 jours</span>
+          <span class="tag">CPF</span>
+        </div>
+      </div>
+      <div class="formation-card">
+        <div class="formation-num">Formation 03</div>
+        <h3>Devenir Formateur Interne en Entreprise</h3>
+        <p>Pour les experts métier qui souhaitent partager leurs compétences en interne de façon structurée et efficace.</p>
+        <div class="formation-tags">
+          <span class="tag teal">Inter/Intra</span>
+          <span class="tag">2 jours</span>
+          <span class="tag">Plan formation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINANCEMENT -->
+<div class="financement-section">
+  <div class="financement-inner">
+    <div>
+      <div class="section-label">Financement &amp; Modalités</div>
+      <div class="section-title">Formez-vous sans avancer l'argent</div>
+      <div class="section-sub">Nos formations sont éligibles à de nombreux dispositifs. Nous vous guidons dans le montage de votre dossier.</div>
+      <a href="#" class="btn-white">Parler à un conseiller →</a>
+    </div>
+    <div class="financement-items">
+      <div class="financement-item">
+        <div class="f-dot"></div>
+        <div><h4>OPCO — Opérateurs de Compétences</h4><p>Financement possible à 100% pour salariés et indépendants selon votre secteur.</p></div>
+      </div>
+      <div class="financement-item">
+        <div class="f-dot"></div>
+        <div><h4>Compte Personnel de Formation (CPF)</h4><p>Utilisez vos droits CPF pour financer tout ou partie de votre formation.</p></div>
+      </div>
+      <div class="financement-item">
+        <div class="f-dot"></div>
+        <div><h4>Plan de développement des compétences</h4><p>Pour les entreprises souhaitant former leurs équipes via leur budget formation.</p></div>
+      </div>
+      <div class="financement-item">
+        <div class="f-dot"></div>
+        <div><h4>Prise en charge individuelle</h4><p>Facilités de paiement disponibles pour les particuliers finançant en autonomie.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <div>
+      <h2>Prêt à transmettre<br>votre expertise ?</h2>
+      <p>Contactez-nous pour un audit gratuit de votre projet de formation.</p>
+    </div>
+    <a href="#" class="btn-teal">Nous contacter →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">OPTI<span>FORMA</span></div>
+  <ul class="footer-links">
+    <li><a href="#">Formations</a></li>
+    <li><a href="#">Financement</a></li>
+    <li><a href="#">Qualiopi</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Mentions légales</a></li>
+  </ul>
+  <div class="footer-copy">© 2025 Opti Forma — Tous droits réservés</div>
+</footer>
+
+</body>
+</html>
