@@ -927,14 +927,20 @@ nav {
 .about-history-inner {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 5rem;
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 5rem;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
   align-items: start;
 }
 .about-history-aside {
   position: sticky;
-  top: 6rem;
+  top: 100px;
+  background: #f7fafa;
+  border-radius: 14px;
+  padding: 2rem;
+  border: 1px solid #e0eeec;
+  height: fit-content;
 }
 .about-history-badge {
   display: inline-block;
@@ -997,6 +1003,9 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 5rem;
 }
 
 .about-stats-section {
@@ -1011,6 +1020,9 @@ nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 5rem;
 }
 .about-stat {
   text-align: center;
@@ -2358,9 +2370,10 @@ footer {
   .dispositifs-grid,
   .guarantees-grid { grid-template-columns: 1fr; }
 
-  .about-history-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .about-history-inner { grid-template-columns: 1fr; gap: 3rem; padding: 0; }
   .about-history-aside { position: static; }
-  .about-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-values-grid { padding: 0; }
+  .about-stats-grid { grid-template-columns: repeat(2, 1fr); padding: 0; }
   .about-cta-section { padding: 4rem 1.5rem; }
   .about-history-section,
   .about-values-section,
