@@ -1,25 +1,47 @@
 # OPTI FORMA — Brief Projet Site Web
-
-## Contexte
-Refonte complète du site **opti-forma.fr** en site statique HTML/CSS/JS.  
-Nom de domaine : `opti-forma.fr` chez IONOS.  
-Hébergement : **Cloudflare Pages** (gratuit) — déploiement automatique via GitHub.
+## Mis à jour le 9 mai 2025
 
 ---
 
 ## Stack technique
 
 ```
-Claude Code (local)  →  GitHub (dépôt)  →  Cloudflare Pages (hébergement)
+Claude Code (local) → GitHub (optiforma95-cyber/opti-forma-site) → Cloudflare Pages
                                                       ↑
-                                          opti-forma.fr (DNS IONOS)
+                                          opti-forma.fr (DNS Cloudflare / IONOS)
 ```
 
-- **Langages** : HTML5, CSS3, JavaScript vanilla (pas de framework)
-- **Fonts** : Google Fonts (Syne + DM Sans)
-- **Déploiement** : `git push` → Cloudflare déploie automatiquement en ~30s
+- **Langages** : HTML5, CSS3, JavaScript vanilla
+- **Fonts** : Google Fonts — Syne (titres) + DM Sans (corps)
+- **Formulaire** : Formspree (https://formspree.io/f/mdabpngk) → contact@opti-forma.fr
+- **Déploiement** : `git push` → Cloudflare redéploie en ~30s
 - **HTTPS** : automatique via Cloudflare
-- **Coût** : 0€/mois
+- **Coût hébergement** : 0€/mois
+
+---
+
+## Informations légales Opti Forma
+
+- **Raison sociale** : OPTIFORMA
+- **Statut** : SASU au capital variable
+- **SIRET** : 98840369700010
+- **SIREN** : 988403697
+- **Adresse** : 9 Chaussée Jules César, 95520 Osny
+- **Email** : contact@opti-forma.fr
+- **Téléphone** : 06 35 46 84 92
+- **N° déclaration d'activité** : 11950956995 (auprès du préfet de région d'Île-de-France)
+- **Code NAF** : 8559A — Formation continue d'adultes
+- **Certification Qualiopi** : CAP2061 — CAPCERT — Accréditation COFRAC n°5-0638
+- **Valide jusqu'au** : 10 septembre 2028
+- **Hébergeur** : Cloudflare Inc., 101 Townsend St, San Francisco, CA 94107, USA
+
+---
+
+## Réseaux sociaux
+
+- **Facebook** : https://facebook.com/share/19ywZobqVt
+- **Instagram** : https://instagram.com/opti.formation
+- **LinkedIn** : https://linkedin.com/in/opti-forma-77679a399
 
 ---
 
@@ -39,26 +61,12 @@ Claude Code (local)  →  GitHub (dépôt)  →  Cloudflare Pages (hébergement)
 | Fond clair     | `#f7fafa` | Fond alternance sections                   |
 | Bordure        | `#e0eeec` | Bordures cartes, séparateurs               |
 
-> Règle d'accessibilité : texte blanc sur fond `#30998D` (ratio WCAG AA 4.5:1 respecté).
-
-### Typographies (Google Fonts)
-- **Titres** : `Syne` — Bold 700 / ExtraBold 800
-- **Corps** : `DM Sans` — Regular 400 / Medium 500
-
+### Typographies
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 ```
-
-| Élément        | Police   | Taille    | Graisse       | Couleur   |
-|----------------|----------|-----------|---------------|-----------|
-| H1 Hero        | Syne     | 3.8rem    | ExtraBold 800 | `#1a2e2c` |
-| H2 Section     | Syne     | 2.6rem    | ExtraBold 800 | `#1a2e2c` |
-| H3 Carte       | Syne     | 1.1rem    | Bold 700      | `#1a2e2c` |
-| Corps          | DM Sans  | 1rem      | Regular 400   | `#2d3f3d` |
-| Sous-titre     | DM Sans  | 1.05rem   | Regular 400   | `#6b8a87` |
-| Label section  | DM Sans  | 0.72rem   | Bold 700      | `#30998D` |
-| Bouton         | Syne     | 0.9rem    | Bold 700      | `#ffffff` |
-| Navigation     | DM Sans  | 0.88rem   | Medium 500    | `#6b8a87` |
+- **Titres** : Syne Bold 700 / ExtraBold 800
+- **Corps** : DM Sans Regular 400 / Medium 500
 
 ---
 
@@ -66,170 +74,131 @@ Claude Code (local)  →  GitHub (dépôt)  →  Cloudflare Pages (hébergement)
 
 ```
 opti-forma-site/
-├── index.html          ← Accueil
-├── formations.html     ← Catalogue formations
-├── financement.html    ← Financement & modalités
-├── qualiopi.html       ← Certification Qualiopi
-├── contact.html        ← Formulaire de contact
-├── css/
-│   └── style.css       ← Styles communs
-├── js/
-│   └── main.js         ← Scripts communs
-├── assets/
-│   └── images/
-└── opti-forma-preview.html  ← Design de référence validé
+├── index.html                      ← Accueil
+├── formations.html                 ← Catalogue 3 formations
+├── financement.html                ← 4 dispositifs financement
+├── qualiopi.html                   ← Certification + certificat CAP2061
+├── contact.html                    ← Formulaire Formspree
+├── mentions-legales.html           ← Mentions légales
+├── politique-confidentialite.html  ← Politique RGPD
+├── formation-rncp37275.html        ← Détail RNCP37275
+├── formation-rs6490.html           ← Détail RS6490
+├── css/style.css                   ← Styles communs
+├── js/main.js                      ← Scripts communs
+└── assets/images/
 ```
 
 ---
 
-## Pages & Contenu
+## Formations
 
-### `index.html` — Accueil
-- **Nav** fixe : logo OPTIFORMA, liens (Nos formations / Pourquoi nous / Financement / Qualiopi), bouton CTA Contact
-- **Hero** : fond blanc, bloc teal clair à droite (clip-path), badge "Certification Qualiopi", H1 "Devenez formateur compétent & reconnu", paragraphe intro, 2 boutons (Voir nos formations / Financement & modalités), stats (100% OPCO / Qualiopi / Terrain), carte formation flottante à droite
-- **Pourquoi nous** : fond `#f7fafa`, 4 cartes (Pédagogie terrain / Qualiopi / Accompagnement personnalisé / Méthodes simples)
-- **Aperçu formations** : 3 cartes formation
-- **CTA band** : fond `#1a2e2c`, texte blanc, bouton teal
-- **Footer** : fond `#1a2e2c`, logo, liens, copyright
+### Formation 01 — RNCP37275
+- **Titre** : Formateur Professionnel d'Adultes
+- **Certificateur** : Ministère du Travail, du Plein Emploi et de l'Insertion
+- **Niveau** : 5 (Bac+2)
+- **Valide jusqu'au** : 29 avril 2028
+- **Durée** : 3 à 6 mois
+- **Financement** : CPF, OPCO
+- **4 CCP** :
+  - CCP1 — Concevoir et préparer la formation
+  - CCP2 — Animer une formation et évaluer les acquis
+  - CCP3 — Accompagner les apprenants en formation
+  - CCP4 — Inscrire sa pratique dans une démarche qualité et RSE
+- **Lien** : https://www.francecompetences.fr/recherche/rncp/37275/
 
-### `formations.html` — Formations
-- Header de page (titre + description)
-- Grille 3 colonnes de cartes formations
-- Chaque carte : numéro, titre, description, durée, tags, bouton "En savoir plus"
+### Formation 02 — RS6490
+- **Titre** : Animer une formation en situation professionnelle
+- **Certificateur** : Manitude
+- **Enregistré** : 21/12/2023
+- **Valide jusqu'au** : 21 décembre 2028
+- **Durée** : 4 à 5 jours (24h à 40h selon positionnement)
+- **Financement** : CPF, OPCO, Plan de développement des compétences
+- **Prérequis** : Expertise professionnelle d'au moins 3 ans
+- **5 compétences** :
+  - Concevoir l'action de formation sur son sujet d'expertise
+  - Instaurer les conditions favorables à l'apprentissage
+  - Conduire l'action de formation selon le programme pédagogique
+  - Gérer les situations sensibles durant la formation
+  - Évaluer le niveau d'acquisition des compétences
+- **Lien** : https://www.francecompetences.fr/recherche/rs/6490/
 
-**Formations :**
-1. Concevoir & Animer une Formation Professionnelle — 3 jours — Certifiante — OPCO/CPF
-2. Évaluer & Améliorer ses Actions de Formation — 2 jours — Pratique — CPF
-3. Devenir Formateur Interne en Entreprise — 2 jours — Inter/Intra — Plan de formation
-
-### `financement.html` — Financement & Modalités
-- 4 dispositifs : OPCO / CPF / Plan de compétences / Prise en charge individuelle
-- CTA "Nous contacter pour étude de dossier"
-
-### `qualiopi.html` — Qualiopi
-- Présentation de la certification
-- Ce que ça garantit (qualité pédagogique, accès financements publics)
-- Critères du référentiel national qualité
-- CTA vers contact
-
-### `contact.html` — Contact
-- Formulaire : Nom, Prénom, Email, Téléphone, Sujet (select), Message, bouton Envoyer
-- Informations de contact
-- Note délais de réponse
-
----
-
-## Règles d'espacement
-
-| Propriété               | Valeur        | Usage                            |
-|-------------------------|---------------|----------------------------------|
-| Padding horizontal      | 5rem (80px)   | Marge gauche/droite des sections |
-| Padding vertical        | 6rem (96px)   | Haut et bas des sections         |
-| Gap grille formations   | 1.5rem (24px) | Espacement entre les cartes      |
-| Border-radius cartes    | 14px          | Arrondi des angles               |
-| Border-radius boutons   | 6px           | Arrondi des boutons              |
-| Max-width contenu       | 1280px        | Largeur maximale des sections    |
+### Formation 03 — SSCT *(à venir)*
+- **Titre** : Santé, Sécurité et Conditions de Travail
+- **Statut** : En cours d'agrément
+- **Public** : Représentants du personnel, employeurs
+- **Affichage** : Carte "Bientôt disponible" avec badge ambré
 
 ---
 
-## Composants UI
+## Conformité Qualiopi (Critère 1 — Indicateur 1)
 
-### Bouton principal
-```css
-background: #30998D; color: white; font-family: Syne; font-weight: 700;
-padding: 0.9rem 2rem; border-radius: 6px;
-```
+Sur chaque fiche formation :
+- ✅ Objectifs pédagogiques
+- ✅ Prérequis
+- ✅ Durée
+- ✅ Modalités et délais d'accès (48h à 2 mois)
+- ✅ Tarif (sur devis personnalisé)
+- ✅ Méthodes pédagogiques
+- ✅ Modalités d'évaluation
+- ✅ Accessibilité handicap (contact@opti-forma.fr)
+- ✅ Date de mise à jour (Mai 2025)
 
-### Bouton outline
-```css
-border: 2px solid #c2e8e3; color: #30998D; background: transparent;
-font-weight: 600; padding: 0.9rem 1.5rem; border-radius: 6px;
-```
-
-### Carte formation
-```css
-border: 1px solid #e0eeec; border-radius: 14px; padding: 2rem;
-background: white; transition: border-color + box-shadow au hover;
-```
-
-### Badge/Tag teal
-```css
-background: #e8f5f3; border: 1px solid #c2e8e3; color: #216e65;
-font-size: 0.7rem; font-weight: 700; padding: 0.25rem 0.7rem; border-radius: 100px;
-```
+Sur toutes les pages (footer) :
+- ✅ N° déclaration d'activité 11950956995
+- ✅ Certificat Qualiopi CAP2061 affiché (page qualiopi.html)
+- ✅ Mentions légales
+- ✅ Politique de confidentialité
 
 ---
 
-## Navigation
+## Conformité RGPD
 
-Identique sur toutes les pages. Lien actif en `#30998D`.
-
-```html
-<nav>
-  <div class="logo">OPTI<span>FORMA</span></div>
-  <ul>
-    <li><a href="formations.html">Nos formations</a></li>
-    <li><a href="financement.html">Financement</a></li>
-    <li><a href="qualiopi.html">Qualiopi</a></li>
-    <li><a href="contact.html" class="nav-cta">Contact</a></li>
-  </ul>
-</nav>
-```
+- ✅ Politique de confidentialité complète
+- ✅ Case à cocher obligatoire sur le formulaire de contact
+- ✅ Pas de cookies tiers, pas de tracking
+- ✅ Droits RGPD mentionnés (accès, rectification, suppression)
+- ✅ Autorité de contrôle : CNIL
 
 ---
 
-## Responsive
+## Espacement & Composants
 
-- **Mobile** : navigation hamburger, grilles 1 colonne, hero en colonne unique
-- **Tablette** : grilles 2 colonnes
-- **Desktop** : grilles 3 colonnes, layout complet
-- Breakpoints : `768px` (mobile) et `1024px` (tablette)
-
----
-
-## Référence design
-
-Le design validé est dans `opti-forma-preview.html` à la racine du projet.  
-Respecter strictement : couleurs, typographies, espacements, style des cartes et boutons.
+| Propriété             | Valeur        |
+|-----------------------|---------------|
+| Padding horizontal    | 5rem (80px)   |
+| Padding vertical      | 6rem (96px)   |
+| Gap grille formations | 1.5rem (24px) |
+| Border-radius cartes  | 14px          |
+| Border-radius boutons | 6px           |
+| Max-width contenu     | 1280px        |
 
 ---
 
-## Déploiement — GitHub + Cloudflare Pages
+## Déploiement
 
-### Étape 1 — GitHub
-1. Créer un compte sur [github.com](https://github.com)
-2. Créer un nouveau dépôt : `opti-forma-site` (public)
-3. Dans le dossier du projet :
+### Workflow mise à jour
 ```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/TON_COMPTE/opti-forma-site.git
-git push -u origin main
-```
-
-### Étape 2 — Cloudflare Pages
-1. Créer un compte sur [pages.cloudflare.com](https://pages.cloudflare.com) (gratuit)
-2. "Create a project" → connecter le compte GitHub
-3. Sélectionner le dépôt `opti-forma-site`
-4. Framework preset : **None** (site statique)
-5. Build command : laisser vide
-6. Build output directory : `/` (racine)
-7. Déployer → Cloudflare génère une URL temporaire (ex: `opti-forma-site.pages.dev`)
-
-### Étape 3 — Domaine custom IONOS → Cloudflare
-1. Dans Cloudflare Pages → Custom domains → `opti-forma.fr`
-2. Cloudflare fournit 2 enregistrements DNS à ajouter
-3. Dans IONOS → Gestion DNS de `opti-forma.fr` → ajouter les enregistrements CNAME fournis
-4. Propagation DNS : 5 à 30 minutes
-5. HTTPS activé automatiquement ✅
-
-### Mise à jour du site (workflow quotidien)
-```bash
-# Modifier les fichiers avec Claude Code, puis :
 git add .
 git commit -m "Description des modifications"
 git push
-# → Cloudflare redéploie automatiquement en ~30 secondes
+# Cloudflare redéploie automatiquement en ~30s
 ```
+
+### Configuration DNS
+- **Nameservers** : fatima.ns.cloudflare.com / luke.ns.cloudflare.com (configurés chez IONOS)
+- **CNAME** opti-forma.fr → opti-forma-site.pages.dev (Cloudflare)
+- **CNAME** www → opti-forma-site.pages.dev (Cloudflare)
+
+---
+
+## À faire (prochaines étapes)
+
+- [ ] Ajouter section **avis clients** sur index.html
+- [ ] Ajouter bouton **Calendly** (réserver un appel)
+- [ ] Ajouter section **"Comment ça marche"**
+- [ ] Ajouter **stats chiffrées** (nombre d'apprenants, taux satisfaction, etc.)
+- [ ] Ajouter **logo définitif** quand il sera prêt
+- [ ] Compléter fiche **SSCT** quand l'agrément sera obtenu
+- [ ] Vérifier et corriger **affichage mobile** (hero, menu)
+- [ ] Résilier **Durable** une fois propagation DNS confirmée
+- [ ] Ajouter **CGV** si nécessaire
