@@ -840,6 +840,81 @@ nav {
 .rncp-badge:hover { background: var(--teal-mid); }
 
 /* ══════════════════════════════════════════
+   SECTION — FAQ
+   ══════════════════════════════════════════ */
+.faq-section {
+  background: var(--white);
+  padding: 5rem 5rem;
+}
+.faq-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.faq-inner .section-sub {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.faq-list {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:first-child {
+  border-top: 1px solid var(--border);
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.4;
+}
+.faq-question:hover { color: var(--teal); }
+.faq-chevron {
+  flex-shrink: 0;
+  color: var(--teal);
+  transition: transform 0.25s ease;
+}
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.28s ease;
+  overflow: hidden;
+}
+.faq-item.open .faq-answer {
+  grid-template-rows: 1fr;
+}
+.faq-answer > p {
+  min-height: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+  padding-bottom: 1.2rem;
+}
+.faq-answer a {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ══════════════════════════════════════════
    SECTION — FINANCEMENT BAND (index)
    ══════════════════════════════════════════ */
 .financement-band {
@@ -2018,6 +2093,7 @@ footer {
   .why-section,
   .trust-section,
   .how-section,
+  .faq-section,
   .formations-section,
   .financement-band,
   .cta-section,
@@ -2094,6 +2170,7 @@ footer {
   .why-section,
   .trust-section,
   .how-section,
+  .faq-section,
   .formations-section,
   .financement-band,
   .cta-section,
@@ -2103,6 +2180,8 @@ footer {
   .qualiopi-guarantees,
   .qualiopi-criteria,
   .contact-section { padding: 4rem 1.5rem; }
+
+  .faq-question { font-size: 0.88rem; }
 
   .trust-badges { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
 
