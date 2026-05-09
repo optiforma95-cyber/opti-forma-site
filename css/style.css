@@ -918,6 +918,138 @@ nav {
 }
 
 /* ══════════════════════════════════════════
+   PAGE — À PROPOS
+   ══════════════════════════════════════════ */
+.about-history-section {
+  background: var(--white);
+  padding: 5rem 5rem;
+}
+.about-history-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.about-history-aside {
+  position: sticky;
+  top: 6rem;
+}
+.about-history-badge {
+  display: inline-block;
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  margin-bottom: 1.2rem;
+}
+.about-history-founder {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+.about-history-role {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.about-history-creds {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.about-cred-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.about-cred-item svg { color: var(--teal); flex-shrink: 0; }
+.about-history-text .section-sub { margin-bottom: 0; }
+.about-history-text p {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.85;
+  margin-bottom: 1.3rem;
+}
+.about-history-text p:last-child { margin-bottom: 0; }
+
+.about-values-section {
+  background: var(--bg-light);
+  padding: 5rem 5rem;
+}
+.about-values-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.about-stats-section {
+  background: var(--dark);
+  padding: 5rem 5rem;
+}
+.about-stats-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.about-stat {
+  text-align: center;
+  padding: 2rem 1rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+}
+.about-stat-number {
+  font-family: 'Syne', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--teal);
+  line-height: 1;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+.about-stat-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+}
+
+.about-cta-section {
+  background: var(--white);
+  padding: 6rem 5rem;
+}
+.about-cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-cta-text {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+/* ══════════════════════════════════════════
    SECTION — FINANCEMENT BAND (index)
    ══════════════════════════════════════════ */
 .financement-band {
@@ -2221,9 +2353,18 @@ footer {
 
   /* Grilles → 1 colonne */
   .why-grid,
+  .about-values-grid,
   .formations-grid,
   .dispositifs-grid,
   .guarantees-grid { grid-template-columns: 1fr; }
+
+  .about-history-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .about-history-aside { position: static; }
+  .about-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-cta-section { padding: 4rem 1.5rem; }
+  .about-history-section,
+  .about-values-section,
+  .about-stats-section { padding: 4rem 1.5rem; }
 
   .financement-band-inner,
   .qualiopi-intro-inner,
