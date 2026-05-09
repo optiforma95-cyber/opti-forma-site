@@ -14,7 +14,6 @@
       const open = navLinks.classList.toggle('open');
       hamburger.classList.toggle('open', open);
       hamburger.setAttribute('aria-expanded', open);
-      document.body.style.overflow = open ? 'hidden' : '';
     });
 
     navLinks.querySelectorAll('a').forEach(link => {
@@ -22,7 +21,6 @@
         navLinks.classList.remove('open');
         hamburger.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
       });
     });
 
@@ -31,7 +29,6 @@
         navLinks.classList.remove('open');
         hamburger.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
       }
     });
   }
