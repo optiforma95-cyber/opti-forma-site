@@ -43,7 +43,9 @@
       <h2 class="section-title" style="font-size:1.8rem; margin-bottom:0.5rem;">Envoyez-nous un message</h2>
       <p style="font-size:0.92rem; color:var(--muted); margin-bottom:2rem;">Tous les champs marqués d'un <span style="color:var(--teal);">*</span> sont obligatoires.</p>
 
-      <form class="contact-form" novalidate>
+      <form class="contact-form" action="https://formspree.io/f/mdabpngk" method="POST">
+        <input type="hidden" name="_subject" value="Nouveau message - Opti Forma">
+        <input type="hidden" name="_language" value="fr">
         <div class="form-row">
           <div class="form-group">
             <label for="nom">Nom <span>*</span></label>
@@ -97,8 +99,8 @@
       </form>
 
       <div class="form-success">
-        <strong>Message envoyé avec succès !</strong>
-        Merci pour votre message. Notre équipe vous recontactera sous 24h ouvrées.
+        <strong>Merci !</strong>
+        <p>Votre message a bien été envoyé. Nous vous répondons sous 24h ouvrées.</p>
       </div>
     </div>
 

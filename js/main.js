@@ -45,22 +45,36 @@
     }
   });
 
-  /* ── Contact form ── */
+  /* ── Contact form — Formspree (AJAX) ── */
   const form    = document.querySelector('.contact-form');
   const success = document.querySelector('.form-success');
 
   if (form && success) {
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('[type="submit"]');
       btn.disabled = true;
       btn.textContent = 'Envoi en cours…';
 
-      setTimeout(() => {
-        form.style.display = 'none';
-        success.classList.add('show');
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 800);
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          success.classList.add('show');
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Envoyer le message →';
+        }
+      } catch (_) {
+        btn.disabled = false;
+        btn.textContent = 'Envoyer le message →';
+      }
     });
   }
 
