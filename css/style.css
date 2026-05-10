@@ -154,14 +154,11 @@ nav {
 }
 
 .logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 1.4rem;
-  letter-spacing: 0.06em;
-  color: var(--dark);
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
-.logo span { color: var(--teal); }
+.logo img { height: 40px; width: auto; display: block; }
 
 .nav-links {
   display: flex;
@@ -1169,14 +1166,11 @@ footer {
   padding-bottom: 1.5rem;
 }
 .footer-logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 1.2rem;
-  letter-spacing: 0.07em;
-  color: var(--white);
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
-.footer-logo span { color: var(--teal); }
+.footer-logo img { height: 32px; width: auto; display: block; filter: brightness(1); }
 
 .footer-links {
   display: flex;
@@ -2301,6 +2295,7 @@ footer {
   .nav-links li { width: 100%; text-align: center; }
   .nav-links a { font-size: 1rem; display: block; padding: 1rem 0; }
   .nav-hamburger { display: flex; }
+  .logo img { height: 32px; }
 
   /* Hero */
   .hero {
