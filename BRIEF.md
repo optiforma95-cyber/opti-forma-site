@@ -1,5 +1,5 @@
 # OPTI FORMA — Brief Projet Site Web
-## Mis à jour le 9 mai 2025
+## Mis à jour le 11 mai 2026
 
 ---
 
@@ -14,8 +14,6 @@ Claude Code (local) → GitHub (optiforma95-cyber/opti-forma-site) → Cloudflar
 - **Langages** : HTML5, CSS3, JavaScript vanilla
 - **Fonts** : Google Fonts — Syne (titres) + DM Sans (corps)
 - **Formulaire** : Formspree (https://formspree.io/f/mdabpngk) → contact@opti-forma.fr
-- **Calendly** : https://calendly.com/optiforma95/30min (Appel découverte 30 min)
-- **Avis Google** : https://g.page/r/CdV8Ojslu2euEAE/review
 - **Déploiement** : `git push` → Cloudflare redéploie en ~30s
 - **HTTPS** : automatique via Cloudflare
 - **Coût hébergement** : 0€/mois
@@ -44,20 +42,29 @@ Claude Code (local) → GitHub (optiforma95-cyber/opti-forma-site) → Cloudflar
 - **Facebook** : https://facebook.com/share/19ywZobqVt
 - **Instagram** : https://instagram.com/opti.formation
 - **LinkedIn** : https://linkedin.com/in/opti-forma-77679a399
+- **Avis Google** : https://g.page/r/CdV8Ojslu2euEAE/review
 
 ---
 
-## Fondatrice
+## Liens externes clés
 
-- **Prénom** : Nadia
-- **Expérience** : 18 ans d'expérience professionnelle
-- **Diplômes** : BTS, Licence, Titre Professionnel FPA (RNCP37275)
-- **Zone** : Toute la France
-- **Opti Forma** : Créé il y a moins d'un an, certifié Qualiopi dès la 1ère année
+- **Calendly** (réserver un appel 30 min) : https://calendly.com/optiforma95/30min
+- **Avis Google** : https://g.page/r/CdV8Ojslu2euEAE/review
 
 ---
 
 ## Design & Identité visuelle
+
+### Logo
+- **Fichier** : `assets/images/optiforma-logo.svg`
+- **Intégré dans** : navbar + footer de toutes les pages
+
+### Favicon
+- **Fichier** : `favicon.svg` (racine du projet)
+
+### OG Image (réseaux sociaux)
+- `assets/images/og-image.svg`
+- `assets/images/og-image.jpg`
 
 ### Couleurs
 | Variable       | Hex       | Usage                                      |
@@ -91,29 +98,21 @@ opti-forma-site/
 ├── financement.html                ← 4 dispositifs financement
 ├── qualiopi.html                   ← Certification + certificat CAP2061
 ├── contact.html                    ← Formulaire Formspree
-├── a-propos.html                   ← À propos / Nadia
+├── a-propos.html                   ← Page À propos (Nadia, valeurs, stats)
+├── cgv.html                        ← Conditions Générales de Vente (12 articles)
 ├── mentions-legales.html           ← Mentions légales
 ├── politique-confidentialite.html  ← Politique RGPD
+├── 404.html                        ← Page d'erreur personnalisée
 ├── formation-rncp37275.html        ← Détail RNCP37275
 ├── formation-rs6490.html           ← Détail RS6490
+├── favicon.svg                     ← Favicon
 ├── css/style.css                   ← Styles communs
 ├── js/main.js                      ← Scripts communs
 └── assets/images/
+    ├── optiforma-logo.svg          ← Logo officiel
+    ├── og-image.svg                ← Image Open Graph
+    └── og-image.jpg                ← Image Open Graph (format JPG)
 ```
-
----
-
-## Pages index.html — Sections dans l'ordre
-
-1. **Hero** — Badge Qualiopi, H1, paragraphe, 3 boutons (Voir formations / Financement / Réserver appel Calendly), stats (100% OPCO / Qualiopi / Terrain), carte formation RNCP37275
-2. **Pourquoi nous** — 4 cartes (Pédagogie terrain / Qualiopi / Accompagnement / Méthodes)
-3. **Ils nous font confiance** — 6 badges (Qualiopi / CPF / OPCO / Ministère du Travail / Manitude / COFRAC) + bouton avis Google
-4. **Comment ça marche** — 5 étapes (Contact & diagnostic / Positionnement / Financement / Formation / Certification) + bouton Calendly
-5. **Nos formations** — 3 cartes (RNCP37275 / RS6490 / SSCT à venir)
-6. **FAQ** — 10 questions en accordéon
-7. **Financement** — Section teal avec 4 dispositifs
-8. **CTA band** — Fond sombre, bouton contact + lien Calendly
-9. **Footer** — Logo, réseaux sociaux, liens nav, NDA, mentions légales
 
 ---
 
@@ -157,7 +156,52 @@ opti-forma-site/
 
 ---
 
-## Conformité Qualiopi
+## Contenu index.html (sections)
+
+| Section | Statut | Détail |
+|---------|--------|--------|
+| Hero | ✅ | Bouton Calendly intégré |
+| Stats chiffrées | ✅ | Nombre d'apprenants, taux satisfaction, etc. |
+| Pourquoi nous | ✅ | |
+| Aperçu formations | ✅ | |
+| Comment ça marche | ✅ | 5 étapes + bouton Calendly |
+| Ils nous font confiance | ✅ | 6 badges + lien avis Google |
+| FAQ | ✅ | 10 questions accordéon |
+| CTA | ✅ | Bouton Calendly |
+
+---
+
+## Page À propos (a-propos.html)
+
+- **Formatrice** : Nadia — 18 ans d'expérience
+- **Contenu** : Parcours, valeurs, stats, engagement qualité
+- **Photo** : ⏳ À ajouter (placeholder en place)
+- **Lien nav** : Ajouté dans navbar + footer de toutes les pages
+
+---
+
+## SEO & Technique
+
+- ✅ Meta tags (title, description, OG, Twitter Card) sur toutes les pages
+- ✅ Favicon `favicon.svg`
+- ✅ OG image `og-image.jpg` pour le partage réseaux sociaux
+- ✅ Page 404 personnalisée
+- ⏳ Google Search Console (à configurer)
+- ⏳ Sitemap.xml (à créer et soumettre)
+
+---
+
+## Navigation & Footer
+
+- ✅ Lien "À propos" dans navbar de toutes les pages
+- ✅ Lien "À propos" dans footer de toutes les pages
+- ✅ Lien "CGV" dans footer de toutes les pages
+- ✅ Icônes réseaux sociaux (Facebook, Instagram, LinkedIn) dans footer de toutes les pages
+- ✅ Logo SVG dans navbar + footer
+
+---
+
+## Conformité Qualiopi (Critère 1 — Indicateur 1)
 
 Sur chaque fiche formation :
 - ✅ Objectifs pédagogiques
@@ -172,19 +216,19 @@ Sur chaque fiche formation :
 
 Sur toutes les pages (footer) :
 - ✅ N° déclaration d'activité 11950956995
-- ✅ Certificat Qualiopi CAP2061 (page qualiopi.html)
+- ✅ Certificat Qualiopi CAP2061 affiché (page qualiopi.html)
 - ✅ Mentions légales
 - ✅ Politique de confidentialité
-- ✅ Certificat Qualiopi lien vers capcertification.com
+- ✅ CGV (cgv.html — 12 articles)
 
 ---
 
 ## Conformité RGPD
 
 - ✅ Politique de confidentialité complète
-- ✅ Case à cocher obligatoire sur le formulaire
+- ✅ Case à cocher obligatoire sur le formulaire de contact
 - ✅ Pas de cookies tiers, pas de tracking
-- ✅ Droits RGPD mentionnés
+- ✅ Droits RGPD mentionnés (accès, rectification, suppression)
 - ✅ Autorité de contrôle : CNIL
 
 ---
@@ -213,27 +257,26 @@ git push
 ```
 
 ### Configuration DNS
-- **Nameservers** : fatima.ns.cloudflare.com / luke.ns.cloudflare.com
+- **Nameservers** : fatima.ns.cloudflare.com / luke.ns.cloudflare.com (configurés chez IONOS)
 - **CNAME** opti-forma.fr → opti-forma-site.pages.dev (Cloudflare)
 - **CNAME** www → opti-forma-site.pages.dev (Cloudflare)
 
 ---
 
-## À faire
+## Mobile
 
-### Priorité haute
-- [ ] Résilier **Durable** une fois propagation DNS confirmée partout
-- [ ] Ajouter **meta tags SEO** sur toutes les pages (title, description, og:image)
-- [ ] Vérifier et corriger **affichage mobile** complet
+- ✅ Menu hamburger corrigé
+- ✅ Stats page À propos corrigées
+- ⏳ Audit complet mobile à finaliser (hero, autres sections)
 
-### Priorité moyenne
-- [ ] Ajouter **vrais avis clients** quand disponibles
-- [ ] Ajouter **logo définitif** quand il sera prêt
-- [ ] Compléter fiche **SSCT** quand l'agrément sera obtenu
-- [ ] Ajouter **CGV** si nécessaire
-- [ ] Corriger description **Calendly** (bug à l'édition)
+---
 
-### Plus tard
-- [ ] **Blog** / actualités pour le SEO
-- [ ] **Newsletter**
-- [ ] **Espace stagiaire** en ligne
+## À faire (prochaines étapes)
+
+- [ ] **Blog** — structure + 4-5 articles (CPF, Qualiopi, RNCP vs RS, devenir formateur, OPCO)
+- [ ] **Photo de Nadia** sur la page à-propos.html
+- [ ] **Vrais avis clients** — remplacer placeholders section "Ils nous font confiance"
+- [ ] **Formation SSCT** — compléter la fiche quand l'agrément sera obtenu
+- [ ] **Google Search Console** — vérification du domaine + soumission sitemap
+- [ ] **Sitemap.xml** — générer et soumettre
+- [ ] **Résilier Durable** — une fois propagation DNS confirmée
