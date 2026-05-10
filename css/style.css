@@ -158,7 +158,7 @@ nav {
   align-items: center;
   text-decoration: none;
 }
-.logo img { height: 110px; width: auto; }
+.logo img { height: 130px; width: auto; }
 
 .nav-links {
   display: flex;
@@ -1170,7 +1170,7 @@ footer {
   align-items: center;
   text-decoration: none;
 }
-.footer-logo img { height: 80px; width: auto; filter: brightness(0) invert(1); }
+.footer-logo img { height: 95px; width: auto; filter: brightness(0) invert(1); }
 
 .footer-links {
   display: flex;
@@ -2295,7 +2295,7 @@ footer {
   .nav-links li { width: 100%; text-align: center; }
   .nav-links a { font-size: 1rem; display: block; padding: 1rem 0; }
   .nav-hamburger { display: flex; }
-  .logo img { height: 65px; }
+  .logo img { height: 70px; }
 
   /* Hero */
   .hero {
@@ -2369,10 +2369,12 @@ footer {
   .about-history-aside { position: static; }
   .about-values-grid { padding: 0; }
   .about-stats-grid { grid-template-columns: repeat(2, 1fr); padding: 0; }
+  .about-stat { overflow: hidden; word-break: break-word; padding: 1.5rem 1rem; }
+  .about-stat-number { font-size: clamp(1.8rem, 8vw, 2.5rem); }
   .about-cta-section { padding: 4rem 1.5rem; }
   .about-history-section,
-  .about-values-section,
-  .about-stats-section { padding: 4rem 1.5rem; }
+  .about-values-section { padding: 4rem 1.5rem; }
+  .about-stats-section { padding: 4rem 1rem; }
 
   .financement-band-inner,
   .qualiopi-intro-inner,
