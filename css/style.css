@@ -2295,7 +2295,7 @@ footer {
   .nav-links li { width: 100%; text-align: center; }
   .nav-links a { font-size: 1rem; display: block; padding: 1rem 0; }
   .nav-hamburger { display: flex; }
-  .logo img { height: 70px; }
+  .logo img { height: 50px; }
 
   /* Hero */
   .hero {
