@@ -158,7 +158,7 @@ nav {
   align-items: center;
   text-decoration: none;
 }
-.logo img { mix-blend-mode: multiply; height: 55px; width: auto; }
+.logo img { mix-blend-mode: multiply; height: 70px; width: auto; }
 
 .nav-links {
   display: flex;
@@ -2295,7 +2295,7 @@ footer {
   .nav-links li { width: 100%; text-align: center; }
   .nav-links a { font-size: 1rem; display: block; padding: 1rem 0; }
   .nav-hamburger { display: flex; }
-  .logo img { height: 38px; }
+  .logo img { height: 45px; }
 
   /* Hero */
   .hero {
