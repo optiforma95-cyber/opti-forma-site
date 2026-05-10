@@ -158,7 +158,7 @@ nav {
   align-items: center;
   text-decoration: none;
 }
-.logo img { height: 40px; width: auto; display: block; }
+.logo img { mix-blend-mode: multiply; height: 40px; width: auto; }
 
 .nav-links {
   display: flex;
@@ -1170,7 +1170,7 @@ footer {
   align-items: center;
   text-decoration: none;
 }
-.footer-logo img { height: 32px; width: auto; display: block; filter: brightness(1); }
+.footer-logo img { filter: brightness(0) invert(1); height: 32px; width: auto; }
 
 .footer-links {
   display: flex;
