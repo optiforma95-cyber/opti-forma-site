@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+
+  <!-- Fond teal -->
+  <rect width="1200" height="630" fill="#30998D"/>
+
+  <!-- Cercles décoratifs fond -->
+  <circle cx="1160" cy="-20" r="320" fill="none" stroke="white" stroke-width="1.5" opacity="0.07"/>
+  <circle cx="1160" cy="-20" r="220" fill="none" stroke="white" stroke-width="1.5" opacity="0.07"/>
+  <circle cx="1160" cy="-20" r="120" fill="none" stroke="white" stroke-width="1.5" opacity="0.07"/>
+  <circle cx="40"   cy="650" r="260" fill="none" stroke="white" stroke-width="1.5" opacity="0.07"/>
+  <circle cx="40"   cy="650" r="160" fill="none" stroke="white" stroke-width="1.5" opacity="0.07"/>
+
+  <!-- Bande décorative gauche -->
+  <rect x="0" y="0" width="8" height="630" fill="white" opacity="0.18"/>
+
+  <!-- Badge Qualiopi haut gauche -->
+  <rect x="56" y="56" width="52" height="52" rx="10" fill="white" opacity="0.15"/>
+  <text x="82" y="92" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="32" fill="white" text-anchor="middle" opacity="0.9">Q</text>
+
+  <!-- Logo principal OPTIFORMA -->
+  <text
+    x="600" y="290"
+    font-family="Arial Black, Arial, Helvetica, sans-serif"
+    font-weight="900"
+    font-size="118"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="10"
+  >OPTIFORMA</text>
+
+  <!-- Ligne séparatrice -->
+  <rect x="390" y="326" width="420" height="3" rx="1.5" fill="white" opacity="0.35"/>
+
+  <!-- Sous-titre -->
+  <text
+    x="600" y="400"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="400"
+    font-size="28"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="1.5"
+    opacity="0.92"
+  >Organisme de Formation Certifié Qualiopi</text>
+
+  <!-- Ligne séparatrice bas -->
+  <rect x="0" y="570" width="1200" height="1" fill="white" opacity="0.15"/>
+
+  <!-- URL bas de page -->
+  <text
+    x="600" y="604"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="400"
+    font-size="22"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="2"
+    opacity="0.60"
+  >opti-forma.fr</text>
+
+</svg>
