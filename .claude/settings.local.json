@@ -6,7 +6,8 @@
       "Bash(Get-Content \"C:\\\\Users\\\\lsifo\\\\opti-forma-site\\\\css\\\\style.css\")",
       "Bash(Measure-Object -Line)",
       "Bash(npm --version)",
-      "PowerShell(npm list *)"
+      "PowerShell(npm list *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\lsifo\\\\opti-forma-site\\\\assets\\\\images\\\\\" | Format-Table Name, @{N='Taille \\(Ko\\)';E={[math]::Round\\($_.Length/1KB,1\\)}}, LastWriteTime -AutoSize)"
     ]
   }
 }
