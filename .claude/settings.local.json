@@ -11,7 +11,12 @@
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\lsifo\\\\opti-forma-site\\\\assets\\\\images\\\\\" | Format-Table Name, @{N='Ko';E={[math]::Round\\($_.Length/1KB,1\\)}} -AutoSize)",
       "PowerShell(Rename-Item *)",
       "Bash(dir C:\\\\Users\\\\lsifo\\\\opti-forma-site\\\\assets\\\\images *)",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(xargs sed -i \"s/Déclaration d'activité enregistrée sous le numéro 11950956995 auprès du préfet de région d'Île-de-France/Enregistré sous le numéro 11950956995. Cet enregistrement ne vaut pas agrément de l'État./g\")",
+      "Bash(xargs sed -i \"s/© 2025/© 2026/g\")"
     ]
   }
 }

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://opti-forma.fr/sitemap.xml
