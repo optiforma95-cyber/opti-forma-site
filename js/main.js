@@ -5,6 +5,14 @@
 (function () {
   'use strict';
 
+  /* ── Nav scroll shadow ── */
+  const nav = document.getElementById('nav');
+  if (nav) {
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+  }
+
   /* ── Mobile nav toggle ── */
   const hamburger = document.querySelector('.nav-hamburger');
   const navLinks  = document.querySelector('.nav-links');
