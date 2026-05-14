@@ -17,7 +17,8 @@
       "Bash(git push *)",
       "Bash(xargs sed -i \"s/Déclaration d'activité enregistrée sous le numéro 11950956995 auprès du préfet de région d'Île-de-France/Enregistré sous le numéro 11950956995. Cet enregistrement ne vaut pas agrément de l'État./g\")",
       "Bash(xargs sed -i \"s/© 2025/© 2026/g\")",
-      "Bash(python3 -)"
+      "Bash(python3 -)",
+      "Bash(python -c ' *)"
     ]
   }
 }
