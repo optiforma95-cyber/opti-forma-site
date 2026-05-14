@@ -14,7 +14,7 @@
   }
 
   /* ── Mobile nav toggle ── */
-  const hamburger = document.querySelector('.nav-hamburger');
+  const hamburger = document.querySelector('.nav-burger');
   const navLinks  = document.querySelector('.nav-links');
 
   if (hamburger && navLinks) {
