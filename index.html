@@ -243,7 +243,7 @@ nav.scrolled{box-shadow:0 4px 24px rgba(26,46,44,.08)}
 /* ══ TWO-COL SECTIONS ══ */
 .two-col{
   display:grid;grid-template-columns:1fr 1fr;
-  gap:clamp(2rem,5vw,5rem);align-items:center;
+  gap:clamp(3rem,6vw,6rem);align-items:center;
 }
 .two-col.reverse{direction:rtl}
 .two-col.reverse>*{direction:ltr}
@@ -275,7 +275,7 @@ nav.scrolled{box-shadow:0 4px 24px rgba(26,46,44,.08)}
 .img-pedagogy img{
   width:200%;height:100%;
   object-fit:cover;
-  object-position:-100% 0%;
+  object-position:100% 0%;
 }
 .img-badge{
   position:absolute;top:1.25rem;right:1.25rem;
@@ -297,6 +297,7 @@ nav.scrolled{box-shadow:0 4px 24px rgba(26,46,44,.08)}
 .cta-img-wrap:hover img{transform:scale(1.04)}
 
 /* Text block */
+.text-block{padding:2rem}
 .text-block h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:800;margin-bottom:1rem}
 .text-block p{font-size:.95rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
 .feature-list{list-style:none;display:flex;flex-direction:column;gap:.85rem;margin-bottom:2rem}
@@ -759,6 +760,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.65);padding:3.5rem 0 2rem}
       <div class="footer-col">
         <h4>Organisme</h4>
         <ul>
+          <li><a href="a-propos.html">À propos</a></li>
           <li><a href="qualiopi.html">Certification Qualiopi</a></li>
           <li><a href="financement.html">Financement &amp; CPF</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -778,6 +780,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.65);padding:3.5rem 0 2rem}
       <div class="footer-legal">
         <a href="mentions-legales.html">Mentions légales</a>
         <a href="politique-confidentialite.html">Confidentialité</a>
+        <a href="cgv.html">CGV</a>
         <a href="qualiopi.html">Qualiopi CAP2061</a>
       </div>
     </div>
