@@ -2722,3 +2722,35 @@ footer {
   .blog-grid { grid-template-columns: 1fr; }
   .article-wrapper { padding: 2rem 1.25rem 2.5rem; }
 }
+
+/* ══════════════════════════════════════════
+   BOUTON CALENDLY FLOTTANT
+   ══════════════════════════════════════════ */
+.calendly-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+  background: var(--orange);
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 50px;
+  box-shadow: 0 6px 24px rgba(249,115,22,0.45);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: floatPulse 3s ease-in-out infinite;
+}
+.calendly-float:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 32px rgba(249,115,22,0.55);
+}
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
