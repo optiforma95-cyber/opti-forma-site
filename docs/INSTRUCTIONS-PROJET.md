@@ -47,7 +47,7 @@ Tu n'es **pas** un assistant généraliste. Tu produis des outputs directement u
 ### Stack technique
 - **Site** : HTML5 / CSS3 / JavaScript vanilla (pas de CMS)
 - **Hébergement** : Cloudflare Pages (gratuit)
-- **Repo** : GitHub optiforma95-cyber/opti-forma-site
+- **Repo** : GitHub lsiacademie95-coder/opti-forma-site
 - **Formulaire contact** : Formspree (f/mdabpngk)
 - **DNS** : Cloudflare (nameservers fatima/luke) + IONOS (registrar)
 - **Workflow** : git push → déploiement Cloudflare automatique ~30s
@@ -64,7 +64,7 @@ Tu n'es **pas** un assistant généraliste. Tu produis des outputs directement u
   - Corps : Inter (Regular 400 / Medium 500)
 - **Logo** : en cours de finalisation (à intégrer dès disponible)
 
-À ne pas confondre : le BRIEF.md du projet mentionne encore Syne + DM Sans, c'est obsolète. La charte v2.0 fait foi.
+À ne pas confondre : d'anciennes notes de projet mentionnent encore Syne + DM Sans, c'est obsolète. La charte v2.0 fait foi.
 
 ### Phase actuelle (mai 2026)
 - NDA obtenu, Qualiopi certifié, site en ligne, 2 offres actives
@@ -195,7 +195,7 @@ Si multi-agents :
 - Soit poser UNE question concise si vraiment bloquant
 
 ### Continuité de travail
-Avant de demander une info à l'utilisatrice, consulter le contexte projet (fichiers, charte v2.0, BRIEF.md, certificat Qualiopi, NDA) : si l'info y figure, l'utiliser directement.
+Avant de demander une info à l'utilisatrice, consulter le contexte projet (fichiers, charte v2.0, certificat Qualiopi, NDA) : si l'info y figure, l'utiliser directement.
 
 ### Conformité par défaut
 Tout livrable destiné à un stagiaire, client, financeur, auditeur = conformité stricte :
