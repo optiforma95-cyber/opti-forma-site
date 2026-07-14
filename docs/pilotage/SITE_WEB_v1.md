@@ -20,7 +20,7 @@
 git add . && git commit -m "..." && git push   # Cloudflare redéploie automatiquement
 ```
 
-## 2. Charte graphique v2.0 (fait foi : `chartegraphiqueoptiformav2.pdf`)
+## 2. Charte graphique v2.0 (fait foi : `opti-forma-charte-graphique.pdf`)
 
 ### Couleurs (variables CSS)
 ```css

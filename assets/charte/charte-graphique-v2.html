@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Opti Forma — Charte Graphique v2.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#30998D; --teal-dark:#216e65; --teal-light:#e8f5f3; --teal-mid:#c2e8e3;
+    --orange:#F97316; --orange-dark:#ea6a0a; --orange-light:#fff7f0;
+    --dark:#1a2e2c; --text:#2d3f3d; --muted:#6b8a87; --border:#e0eeec; --bg-light:#f7fafa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--text);}
+  h1,h2,h3,.head,.badge,.btn,.label{font-family:'Plus Jakarta Sans',system-ui,sans-serif;}
+
+  .page{
+    width:210mm;height:297mm;position:relative;overflow:hidden;
+    background:#fff;page-break-after:always;
+  }
+  .page:last-child{page-break-after:auto;}
+
+  /* Bandeau haut */
+  .topbar{
+    height:14mm;background:var(--dark);color:#fff;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:0 14mm;font-size:9pt;
+  }
+  .topbar .brand{font-weight:800;letter-spacing:.5px;}
+  .topbar .brand span{color:var(--teal);}
+  .topbar .sec{color:#9fc7c1;font-family:'Inter';font-weight:500;}
+  .topbar .num{color:#7ba9a3;font-family:'Inter';}
+
+  .body{padding:16mm 14mm;}
+  .footer{
+    position:absolute;bottom:0;left:0;right:0;height:12mm;
+    border-top:1px solid var(--border);display:flex;align-items:center;
+    justify-content:space-between;padding:0 14mm;color:#9bb0ad;font-size:7.5pt;
+  }
+
+  h2.title{font-size:26pt;font-weight:800;color:var(--dark);margin-bottom:4mm;}
+  .subtitle{color:var(--muted);font-size:11pt;margin-bottom:10mm;}
+  h3.block{font-size:14pt;font-weight:700;color:var(--dark);margin:9mm 0 4mm;
+    border-bottom:1px solid var(--border);padding-bottom:2mm;}
+
+  /* ---------- Couverture ---------- */
+  .cover{background:var(--dark);height:297mm;color:#fff;position:relative;}
+  .cover .circle{position:absolute;border-radius:50%;}
+  .cover .c1{width:150mm;height:150mm;background:#2c6a62;top:-40mm;right:-30mm;opacity:.55;}
+  .cover .c2{width:70mm;height:70mm;background:var(--orange);bottom:60mm;right:24mm;opacity:.9;}
+  .cover .c3{width:34mm;height:34mm;background:var(--teal);bottom:120mm;left:70mm;opacity:.5;}
+  .cover .inner{position:absolute;top:60mm;left:22mm;right:22mm;}
+  .cover .logo{font-family:'Plus Jakarta Sans';font-weight:800;font-size:46pt;letter-spacing:1px;}
+  .cover .logo span{color:var(--teal);}
+  .cover .rule{width:70mm;height:4px;background:var(--orange);margin:6mm 0 10mm;}
+  .cover h1{font-size:30pt;font-weight:800;margin-bottom:4mm;}
+  .cover .lead{color:#a9cec9;font-size:12pt;}
+  .cover .meta{position:absolute;bottom:44mm;left:22mm;right:22mm;}
+  .cover .meta .org{font-weight:700;font-size:12pt;margin-bottom:2mm;}
+  .cover .meta .sub{color:#8fb6b1;font-size:9.5pt;}
+  .cover .verchip{position:absolute;bottom:22mm;left:22mm;background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.2);padding:3mm 6mm;border-radius:6px;
+    font-family:'Plus Jakarta Sans';font-weight:700;font-size:9pt;}
+
+  /* ---------- Palette ---------- */
+  .swatches{display:grid;grid-template-columns:1fr 1fr;gap:5mm;}
+  .sw{display:flex;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+  .sw .chip{width:34mm;flex:none;display:flex;align-items:flex-end;padding:4mm;
+    font-family:'Plus Jakarta Sans';font-weight:700;font-size:8.5pt;}
+  .sw .info{padding:4mm 5mm;}
+  .sw .info .n{font-weight:700;font-size:11pt;color:var(--dark);margin-bottom:1.5mm;}
+  .sw .info .d{color:var(--muted);font-size:8.5pt;line-height:1.5;}
+  .grp-label{font-family:'Plus Jakarta Sans';font-weight:700;font-size:8pt;letter-spacing:1px;
+    color:var(--teal);text-transform:uppercase;margin:7mm 0 3mm;}
+  .grp-label.accent{color:var(--orange);}
+  .note{background:var(--teal-light);border-radius:10px;padding:5mm 6mm;margin-top:8mm;
+    font-size:9pt;color:var(--text);line-height:1.6;}
+  .note.accent{background:var(--orange-light);}
+  .note b{color:var(--dark);}
+
+  /* ---------- Typo ---------- */
+  .fonts{display:grid;grid-template-columns:1fr 1fr;gap:6mm;}
+  .fontcard{border:1px solid var(--border);border-radius:12px;padding:6mm;}
+  .fontcard .k{font-family:'Plus Jakarta Sans';font-weight:700;font-size:8pt;letter-spacing:1px;
+    color:var(--teal);text-transform:uppercase;margin-bottom:3mm;}
+  .fontcard .k.b{color:var(--orange);}
+  .fontcard .sample{font-size:30pt;font-weight:800;color:var(--dark);line-height:1;}
+  .fontcard .sample.inter{font-family:'Inter';}
+  .fontcard .w{margin:3mm 0;color:var(--text);font-size:10pt;}
+  .fontcard .u{color:var(--muted);font-size:8.5pt;line-height:1.6;}
+
+  table{width:100%;border-collapse:collapse;font-size:9pt;margin-top:2mm;}
+  thead th{background:var(--dark);color:#fff;text-align:left;padding:3mm 4mm;font-weight:700;
+    font-family:'Plus Jakarta Sans';font-size:8.5pt;}
+  tbody td{padding:2.6mm 4mm;border-bottom:1px solid var(--border);color:var(--text);}
+  tbody tr:nth-child(even){background:var(--bg-light);}
+  .cbox{display:inline-block;padding:1mm 3mm;border-radius:5px;color:#fff;
+    font-family:'Plus Jakarta Sans';font-weight:700;font-size:7.5pt;}
+
+  /* ---------- Composants ---------- */
+  .btn{display:inline-block;border-radius:6px;font-weight:700;font-size:9.5pt;padding:3.2mm 6mm;}
+  .btn-primary{background:var(--orange);color:#fff;}
+  .btn-teal{background:var(--teal);color:#fff;}
+  .btn-outline{background:#fff;border:2px solid var(--teal-mid);color:var(--teal);}
+  .row{display:flex;gap:5mm;align-items:center;flex-wrap:wrap;margin-bottom:3mm;}
+  .cap{color:var(--muted);font-size:8pt;margin-bottom:6mm;}
+  .badge{display:inline-block;border-radius:20px;padding:1.6mm 4mm;font-size:8pt;font-weight:600;margin-right:2mm;}
+  .b-teal{background:var(--teal-light);color:var(--teal-dark);}
+  .b-orange{background:var(--orange-light);color:var(--orange-dark);}
+  .b-neutral{background:#f1f5f4;color:var(--muted);}
+  .cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5mm;margin-top:3mm;}
+  .card{border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+  .card .bar{height:5px;}
+  .card .in{padding:5mm;}
+  .card .kicker{font-family:'Plus Jakarta Sans';font-weight:700;font-size:7.5pt;letter-spacing:.5px;text-transform:uppercase;margin-bottom:2mm;}
+  .card h4{font-family:'Plus Jakarta Sans';font-size:11pt;color:var(--dark);margin-bottom:2mm;line-height:1.2;}
+  .card p{color:var(--muted);font-size:8pt;line-height:1.5;margin-bottom:3mm;}
+
+  /* ---------- Structure ---------- */
+  .lead-strong{color:var(--dark);font-weight:600;}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 — COUVERTURE -->
+<section class="page cover">
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+  <div class="circle c3"></div>
+  <div class="inner">
+    <div class="logo">OPTI<span>FORMA</span></div>
+    <div class="rule"></div>
+    <h1>Charte Graphique</h1>
+    <div class="lead">Identité visuelle &amp; standards du site web</div>
+  </div>
+  <div class="meta">
+    <div class="org">Opti Forma — Organisme de Formation</div>
+    <div class="sub">Certification Qualiopi &nbsp;|&nbsp; opti-forma.fr &nbsp;|&nbsp; 2025</div>
+  </div>
+  <div class="verchip">Version 2.0 — Mai 2025</div>
+</section>
+
+<!-- PAGE 2 — PALETTE -->
+<section class="page">
+  <div class="topbar"><span class="brand">OPTI<span>FORMA</span></span><span class="sec">Palette de couleurs</span><span class="num">2 / 5</span></div>
+  <div class="body">
+    <h2 class="title">Palette de couleurs</h2>
+    <div class="subtitle">Les couleurs officielles du site Opti Forma.</div>
+
+    <div class="grp-label">Couleurs de marque — Teal</div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#30998D">#30998D</div><div class="info"><div class="n">Teal Principal</div><div class="d">Couleur de marque. Boutons secondaires, accents, icônes, labels.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#216E65">#216E65</div><div class="info"><div class="n">Teal Foncé</div><div class="d">Hover teal, ombres, dégradés.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#E8F5F3;color:#216e65">#E8F5F3</div><div class="info"><div class="n">Teal Clair</div><div class="d">Fonds de sections légères, badges.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#C2E8E3;color:#216e65">#C2E8E3</div><div class="info"><div class="n">Teal Mid</div><div class="d">Bordures outline, badges secondaires.</div></div></div>
+    </div>
+
+    <div class="grp-label accent">Couleur d'accent — Orange</div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#F97316">#F97316</div><div class="info"><div class="n">Orange Accent</div><div class="d">CTA principaux, statistiques, badges importants. Signale l'action.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#EA6A0A">#EA6A0A</div><div class="info"><div class="n">Orange Foncé</div><div class="d">Hover des boutons orange.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#FFF7F0;color:#ea6a0a">#FFF7F0</div><div class="info"><div class="n">Orange Clair</div><div class="d">Fonds de cartes accent orange.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#1A2E2C">#1A2E2C</div><div class="info"><div class="n">Sombre</div><div class="d">Hero, footer, fonds CTA. Contraste fort.</div></div></div>
+    </div>
+
+    <div class="grp-label">Neutres — Texte &amp; fonds</div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#2D3F3D">#2D3F3D</div><div class="info"><div class="n">Texte Principal</div><div class="d">Corps de texte. Lisibilité optimale.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#6B8A87">#6B8A87</div><div class="info"><div class="n">Texte Secondaire</div><div class="d">Descriptions, sous-titres.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#F7FAFA;color:#6b8a87">#F7FAFA</div><div class="info"><div class="n">Fond Clair</div><div class="d">Alternance de sections.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#E0EEEC;color:#6b8a87">#E0EEEC</div><div class="info"><div class="n">Bordure</div><div class="d">Contours de cartes et séparateurs.</div></div></div>
+    </div>
+
+    <div class="note accent"><b>Règle d'usage teal / orange :</b> le teal porte l'identité (structure, liens, icônes) ; l'orange est réservé à l'action (CTA principaux, chiffres clés). Ne pas noyer l'orange : c'est un accent, pas une couleur de fond dominante.</div>
+    <div class="note"><b>Accessibilité :</b> le teal #30998D et l'orange #F97316 sur fond blanc respectent le ratio WCAG AA. Texte blanc sur fond teal/orange/sombre ; texte foncé sur fonds clairs.</div>
+  </div>
+  <div class="footer"><span>Charte Graphique — Opti Forma © 2025 — Confidentiel</span><span>opti-forma.fr</span></div>
+</section>
+
+<!-- PAGE 3 — TYPOGRAPHIE -->
+<section class="page">
+  <div class="topbar"><span class="brand">OPTI<span>FORMA</span></span><span class="sec">Typographie</span><span class="num">3 / 5</span></div>
+  <div class="body">
+    <h2 class="title">Typographie</h2>
+    <div class="subtitle">Deux familles de polices pour une identité moderne et lisible.</div>
+
+    <div class="fonts">
+      <div class="fontcard">
+        <div class="k">Police 01 — Titres</div>
+        <div class="sample">Plus Jakarta</div>
+        <div class="w">SemiBold 600 / Bold 700 / ExtraBold 800</div>
+        <div class="u">Utilisation : titres H1 à H3, logo, boutons, labels de section.<br>Source : Google Fonts (gratuit)</div>
+      </div>
+      <div class="fontcard">
+        <div class="k b">Police 02 — Corps</div>
+        <div class="sample inter">Inter</div>
+        <div class="w">Regular 400 / Medium 500 / SemiBold 600</div>
+        <div class="u">Utilisation : corps de texte, descriptions, navigation, labels.<br>Source : Google Fonts (gratuit)</div>
+      </div>
+    </div>
+
+    <h3 class="block">Hiérarchie typographique</h3>
+    <table>
+      <thead><tr><th>Élément</th><th>Police</th><th>Taille</th><th>Graisse</th><th>Couleur</th></tr></thead>
+      <tbody>
+        <tr><td>H1 Hero</td><td>Plus Jakarta Sans</td><td>clamp 2–3.2rem</td><td>ExtraBold 800</td><td><span class="cbox" style="background:#1a2e2c">#1a2e2c</span></td></tr>
+        <tr><td>H2 Section</td><td>Plus Jakarta Sans</td><td>2.6rem</td><td>ExtraBold 800</td><td><span class="cbox" style="background:#1a2e2c">#1a2e2c</span></td></tr>
+        <tr><td>H3 Carte</td><td>Plus Jakarta Sans</td><td>1.1rem</td><td>Bold 700</td><td><span class="cbox" style="background:#1a2e2c">#1a2e2c</span></td></tr>
+        <tr><td>Corps</td><td>Inter</td><td>1rem</td><td>Regular 400</td><td><span class="cbox" style="background:#2d3f3d">#2d3f3d</span></td></tr>
+        <tr><td>Sous-titre</td><td>Inter</td><td>1.05rem</td><td>Regular 400</td><td><span class="cbox" style="background:#6b8a87">#6b8a87</span></td></tr>
+        <tr><td>Label section</td><td>Plus Jakarta Sans</td><td>0.72rem</td><td>Bold 700</td><td><span class="cbox" style="background:#30998D">#30998D</span></td></tr>
+        <tr><td>Bouton CTA</td><td>Plus Jakarta Sans</td><td>0.9rem</td><td>Bold 700</td><td><span class="cbox" style="background:#F97316">#F97316</span></td></tr>
+        <tr><td>Navigation</td><td>Inter</td><td>0.88rem</td><td>Medium 500</td><td><span class="cbox" style="background:#6b8a87">#6b8a87</span></td></tr>
+      </tbody>
+    </table>
+    <div class="note">La charte v1.0 utilisait <b>Syne + DM Sans</b> — remplacés en v2.0 par <b>Plus Jakarta Sans + Inter</b>. Ne plus utiliser Syne ni DM Sans.</div>
+  </div>
+  <div class="footer"><span>Charte Graphique — Opti Forma © 2025 — Confidentiel</span><span>opti-forma.fr</span></div>
+</section>
+
+<!-- PAGE 4 — COMPOSANTS UI -->
+<section class="page">
+  <div class="topbar"><span class="brand">OPTI<span>FORMA</span></span><span class="sec">Composants UI</span><span class="num">4 / 5</span></div>
+  <div class="body">
+    <h2 class="title">Composants UI</h2>
+    <div class="subtitle">Éléments récurrents du site : boutons, badges, cartes.</div>
+
+    <h3 class="block">Boutons</h3>
+    <div class="row">
+      <span class="btn btn-primary">Voir nos formations →</span>
+      <span class="btn btn-teal">Nous contacter</span>
+      <span class="btn btn-outline">Financement &amp; modalités</span>
+    </div>
+    <div class="cap">CTA principal = orange #F97316 (l'action prioritaire). Bouton teal #30998D = action secondaire. Bouton outline = bordure #c2e8e3, texte teal.</div>
+
+    <h3 class="block">Badges &amp; Tags</h3>
+    <div class="row">
+      <span class="badge b-teal">Certification Qualiopi</span>
+      <span class="badge b-teal">Certifiante</span>
+      <span class="badge b-orange">Finançable</span>
+      <span class="badge b-neutral">3 jours</span>
+      <span class="badge b-neutral">OPCO</span>
+    </div>
+    <div class="cap">Badge teal = statut/certification. Badge orange = argument financement / mise en avant.</div>
+
+    <h3 class="block">Cartes</h3>
+    <div class="cards">
+      <div class="card"><div class="bar" style="background:var(--teal)"></div><div class="in"><div class="kicker" style="color:var(--teal)">Formation 01</div><h4>Concevoir &amp; Animer une Formation Pro</h4><p>Maîtrisez l'ingénierie pédagogique et l'animation.</p><span class="badge b-teal">Certifiante</span><span class="badge b-neutral">3 jours</span></div></div>
+      <div class="card"><div class="bar" style="background:var(--teal-mid)"></div><div class="in"><div class="kicker" style="color:var(--teal)">Pourquoi nous</div><h4>Pédagogie terrain avant tout</h4><p>Mise en pratique immédiate, cas réels, apprentissage actif.</p></div></div>
+      <div class="card"><div class="bar" style="background:var(--orange)"></div><div class="in"><div class="kicker" style="color:var(--orange)">Financement</div><h4>Prise en charge OPCO</h4><p>Solutions pour salariés &amp; indépendants.</p><span class="badge b-orange">Finançable</span></div></div>
+    </div>
+    <div class="cap">Le liseré supérieur code la nature de la carte : teal = formation / contenu, orange = financement / action.</div>
+  </div>
+  <div class="footer"><span>Charte Graphique — Opti Forma © 2025 — Confidentiel</span><span>opti-forma.fr</span></div>
+</section>
+
+<!-- PAGE 5 — STRUCTURE -->
+<section class="page">
+  <div class="topbar"><span class="brand">OPTI<span>FORMA</span></span><span class="sec">Structure &amp; Espacement</span><span class="num">5 / 5</span></div>
+  <div class="body">
+    <h2 class="title">Structure &amp; Espacement</h2>
+    <div class="subtitle">Architecture des pages et règles de mise en page.</div>
+
+    <h3 class="block">Pages du site</h3>
+    <table>
+      <thead><tr><th>Fichier</th><th>Nom</th><th>Contenu principal</th></tr></thead>
+      <tbody>
+        <tr><td class="lead-strong">index.html</td><td>Accueil</td><td>Hero, stats, pourquoi nous, aperçu formations, CTA</td></tr>
+        <tr><td class="lead-strong">formations.html</td><td>Formations</td><td>Catalogue, détail de chaque formation (RNCP / RS / interne)</td></tr>
+        <tr><td class="lead-strong">financement.html</td><td>Financement</td><td>OPCO, plan de compétences, prise en charge individuelle</td></tr>
+        <tr><td class="lead-strong">qualiopi.html</td><td>Qualiopi</td><td>Présentation de la certification, critères, logo officiel</td></tr>
+        <tr><td class="lead-strong">blog.html</td><td>Blog</td><td>Articles SEO, actualités réglementaires</td></tr>
+        <tr><td class="lead-strong">contact.html</td><td>Contact</td><td>Formulaire, coordonnées, prise de rendez-vous</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="block">Règles d'espacement</h3>
+    <table>
+      <thead><tr><th>Propriété</th><th>Valeur</th><th>Usage</th></tr></thead>
+      <tbody>
+        <tr><td>Padding horizontal pages</td><td class="lead-strong">5rem (80px)</td><td>Marge gauche/droite de chaque section</td></tr>
+        <tr><td>Padding vertical sections</td><td class="lead-strong">6rem (96px)</td><td>Haut et bas de chaque section</td></tr>
+        <tr><td>Gap grille formations</td><td class="lead-strong">1.5rem (24px)</td><td>Espacement entre les cartes</td></tr>
+        <tr><td>Border-radius cartes</td><td class="lead-strong">14px</td><td>Arrondi des angles des cartes</td></tr>
+        <tr><td>Border-radius boutons</td><td class="lead-strong">6px</td><td>Arrondi des boutons</td></tr>
+        <tr><td>Max-width contenu</td><td class="lead-strong">1280px</td><td>Largeur maximale des sections</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note"><b>Hébergement :</b> GitHub Pages (gratuit) — opti-forma.fr pointé via DNS vers GitHub. Déploiement automatique à chaque mise à jour du dépôt.</div>
+  </div>
+  <div class="footer"><span>Charte Graphique — Opti Forma © 2025 — Confidentiel</span><span>opti-forma.fr</span></div>
+</section>
+
+</body>
+</html>
